@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-marathi-brush {
+    font-family: 'Yatra One', 'Rozha One', 'Cinzel Decorative', cursive, serif;
+  }
+  .font-script-small {
+    font-family: 'Alex Brush', 'Great Vibes', cursive;
+  }
+  .font-festive-display {
+    font-family: 'Rozha One', 'Yatra One', serif;
+  }
+  .font-festive-serif {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  }
+  .font-festive-heading {
+    font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+  }
+  .font-devanagari {
+    font-family: 'Rozha One', 'Yatra One', 'Kalam', serif;
+  }
+  .font-sans-ui {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  .invitation-container {
+    container-type: inline-size;
+    container-name: invitation;
+  }
+}
+
+/* Subtle Paper Texture */
+.paper-texture {
+  background-image: radial-gradient(#d4af3715 1px, transparent 1px),
+    radial-gradient(#8b5a2b10 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Animated Mode Keyframes */
+@keyframes swaySubtle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(1.2deg);
+  }
+}
+
+@keyframes swayLeft {
+  0%, 100% {
+    transform: rotate(-0.5deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+}
+
+@keyframes swayRight {
+  0%, 100% {
+    transform: rotate(0.5deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+}
+
+@keyframes swaySlow {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes swayLantern1 {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes swayLantern2 {
+  0%, 100% {
+    transform: rotate(1.8deg);
+  }
+  50% {
+    transform: rotate(-1.8deg);
+  }
+}
+
+@keyframes diyaFlameFlicker {
+  0%, 100% {
+    transform: scale(1, 1) skewX(0deg);
+    opacity: 0.95;
+  }
+  25% {
+    transform: scale(1.04, 1.08) skewX(1deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.96, 0.93) skewX(-1deg);
+    opacity: 0.88;
+  }
+  75% {
+    transform: scale(1.02, 1.05) skewX(0.5deg);
+    opacity: 0.98;
+  }
+}
+
+.animate-diya-flame {
+  animation: diyaFlameFlicker 2.2s ease-in-out infinite;
+}
+
+.animate-sway-lantern-1 {
+  animation: swayLantern1 6.8s ease-in-out infinite;
+}
+
+.animate-sway-lantern-2 {
+  animation: swayLantern2 7.8s ease-in-out infinite;
+}
+
+@keyframes flickerSubtle {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 0.45;
+    transform: scale(1.06);
+  }
+  50% {
+    opacity: 0.28;
+    transform: scale(0.96);
+  }
+  75% {
+    opacity: 0.48;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes spinExtremelySlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floatPetal {
+  0% {
+    transform: translateY(-20px) rotate(0deg) translateX(0px);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(680px) rotate(360deg) translateX(60px);
+    opacity: 0;
+  }
+}
+
+.animate-sway-subtle {
+  animation: swaySubtle 6s ease-in-out infinite;
+}
+
+.animate-sway-left {
+  animation: swayLeft 5s ease-in-out infinite;
+}
+
+.animate-sway-right {
+  animation: swayRight 5.5s ease-in-out infinite;
+}
+
+.animate-sway-slow {
+  animation: swaySlow 7s ease-in-out infinite;
+}
+
+.animate-flicker-subtle {
+  animation: flickerSubtle 2.5s ease-in-out infinite;
+}
+
+.animate-spin-extremely-slow {
+  animation: spinExtremelySlow 90s linear infinite;
+}
+
+@keyframes bounceSubtle {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(7px);
+    opacity: 1;
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounceSubtle 2.2s ease-in-out infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-sway-subtle,
+  .animate-sway-left,
+  .animate-sway-right,
+  .animate-sway-slow,
+  .animate-bounce-subtle,
+  .animate-spin-extremely-slow {
+    animation: none !important;
+  }
+}
+

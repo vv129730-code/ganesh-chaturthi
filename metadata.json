@@ -1,0 +1,8 @@
+{
+  "name": "Ganesh Utsav 2026 Digital Invitation",
+  "description": "Ganpati cha Raja - Ganesh Utsav 2026 digital invitation celebrating at 33 Cantt Kanpur Club.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
